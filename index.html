@@ -9,158 +9,173 @@
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        body{
-          background: black
-        }
-        #projects {
-          text-align: center;
-          }
-          
-          .project {
-          margin: 20px;
-          display: inline-block;
-
-          
-          }
-          a{
-            color: red;
-
-          }
-          .project img {
-          object-fit: cover;
-          }
-          
-          .project-info {
-          text-align: left;
-          }
-          .project li{
-            list-style-type: none;
-          }
-          .project a {
-            text-decoration: none;
-            color: #007bff;
-          }
-        .p{
-          color: blue;
-        }
-        .intro{
-          text-shadow: red;
-          color: rgb(230, 170, 6);
-          font-family: none;
-          font-size: 1rem;
-        }
-        .wiz, .res, .lion{
-          width: 16rem;
-          height: 13rem;
-          border-radius: 5px;
-        }
-        header{
-         padding: 30px;
-         color: rgb(225, 228, 234);
-         font-size: 30px;
-         text-align: center;
-        }       
-      .profile{
-          width: 12rem;
-          border-radius: 100px;
+      body {
+        background: black;
       }
+    
+      #projects {
+        text-align: center;
+      }
+    
+      .project {
+        margin: 20px;
+        display: inline-block;
+      }
+    
+      a {
+        color: red;
+      }
+    
+      .project img {
+        object-fit: cover;
+      }
+    
+      .project-info {
+        text-align: left;
+      }
+    
+      .project li {
+        list-style-type: none;
+      }
+    
+      .project a {
+        text-decoration: none;
+        color: #007bff;
+      }
+    
+      .p {
+        color: blue;
+      }
+    
+      .intro {
+        text-shadow: red;
+        color: rgb(230, 170, 6);
+        font-family: none;
+        font-size: 1rem;
+      }
+    
+      .wiz, .res, .lion {
+        width: 16rem;
+        height: 13rem;
+        border-radius: 5px;
+      }
+    
+      header {
+        padding: 30px;
+        color: rgb(225, 228, 234);
+        font-size: 30px;
+        text-align: center;
+      }
+    
+      .profile {
+        width: 12rem;
+        border-radius: 100px;
+      }
+    
       .w-full {
-      width: 100%;
+        width: 100%;
       }
+    
       .bg-blue-500 {
-      background-color: #0808a4;
+        background-color: #0808a4;
       }
+    
       section {
-        background: linear-gradient(to right, rgb(12, 7, 7),#030386);
-          padding: 10px;
-          box-shadow: 0 0 10px rgba(241, 235, 235, 0.1);
-          color: white;
-        }
-        span{
-          font-weight: bold;
-        }
+        background: linear-gradient(to right, rgb(12, 7, 7), #030386);
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(241, 235, 235, 0.1);
+        color: white;
+      }
+    
+      span {
+        font-weight: bold;
+      }
+    
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #1e07ec;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        overflow: hidden;
+      }
+    
+      #openMenu, #closeMenu {
+        display: none;
+      }
+    
+      .logo h2 {
+        font-size: 30px;
+      }
+    
+      #mainMenu {
+        display: flex;
+        gap: 50px;
+        list-style: none;
+      }
+    
+      .mainMenu {
+        list-style: none;
+        color: red;
+      }
+    
+      .mainMenu li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    
+      nav li {
+        display: inline-block;
+      }
+    
+      nav li a {
+        color: rgb(247, 247, 248);
+        text-decoration: none;
+        font-size: 18px;
+      }
+    
+      @media screen and (max-width: 430px) {
         nav {
-          position: relative;
-          color: #1e07ec;
-          padding: 30px 60px;
+          width: 100%;
+          overflow-x: hidden;
           display: flex;
           justify-content: space-between;
-          align-items: center;
-          overflow: hidden;
         }
-        
+    
         #openMenu, #closeMenu {
-          display: none;
+          display: block;
         }
-        
-        .logo h2 {
-          font-size: 30px;
-        }
-        
+    
         #mainMenu {
-          display: flex;
-          gap: 50px;
-          list-style: none;
+          display: none;
+          height: 50%;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: rgb(26, 25, 25);
+          z-index: 10;
         }
-        nav {
-          display: flex;
-          justify-content: flex-end;
+    
+        #closeMenu {
+          position: absolute;
+          top: 10px;
+          left: 5%;
         }
-        
-        .mainMenu {
-          list-style: none;
-          color: red;
-        }
-        
-        .mainMenu li {
-          display: inline-block;
-          margin-right: 20px;
-      
-        }
-        nav li {
-          display: inline-block;
-        }
-        
-        nav li a {
-          color: rgb(247, 247, 248);
-          text-decoration: none;
-          font-size: 18px;
-        }
-        
-        @media screen and (max-width: 430px) {
-          nav {
-            width: 100%;
-            overflow-x: hidden;
-            display: flex;
-            justify-content: space-between;
-          }
-          #openMenu, #closeMenu {
-            display: block;
-          }
-          #mainMenu {
-            display: none;
-            height: 50vh;
-            width: 50%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to right, black, #0707ac, rgb(0, 0, 0), rgb(8, 0, 255), rgb(5, 0, 0));
-            z-index: 10;
-          }
-          #closeMenu {
-            position: absolute;
-            top: 40px;
-            right: 30px;
-          }
-          
-        }
-        footer{
-          color: white;
-        }
-      </style>
+      }
+    
+      footer {
+        color: white;
+      }
+    </style>
+    
 </head>
 <body>
   <header style="background-image: url('image5.jpg'); background-size: cover; background-position: center;">
